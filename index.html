@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Form Section -->
+    <div class="form-container">
+      <h2>Enter Your Details</h2>
+      <form id="cardForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required>
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" required>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+
+        <label for="logo-file">Upload Logo File:</label>
+        <input type="file" id="logo-file" accept="image/*">
+
+        <button type="submit">Generate Cards</button>
+      </form>
+    </div>
+
+    <!-- Card Display Section -->
+    <div class="cards-container" id="cards-section" style="display: none;">
+      <!-- First Card -->
+      <div class="card" id="card1">
+        <h1 id="card-name">Your Name</h1>
+        <div class="card-details">
+          <p><strong>Designation:</strong> <span id="card-designation">Your Designation</span></p>
+          <p><strong>Contact:</strong> <span id="card-phone">+123456789</span></p>
+          <p><strong>Mail:</strong> <span id="card-email">example@example.com</span></p>
+          <p><strong>Website:</strong> <span id="card-website">www.example.com</span></p>
+          <p><strong>Address:</strong> <span id="card-address">Your Address</span></p>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="card-second" id="card2">
+        <div class="logo" id="card-second-logo"></div>
+        <h2 id="card-second-company">Company Name</h2>
+        <p id="card-second-website">www.example.com</p>
+      </div>
+
+      <!-- Note Section -->
+      <div class="note">
+        Download function coming soon. You can take a screenshot of the cards.
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
